@@ -70,5 +70,7 @@ rule merge_variants:
         vcf="results/genotyped/all.vcf.gz",
     log:
         "logs/picard/merge-genotyped.log",
+    resources:
+        mem_mb=100000,
     wrapper:
         "0.74.0/bio/picard/mergevcfs"
